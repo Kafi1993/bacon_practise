@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "#' Conversion function\n#' \n#' This function converts values from one unit (inch, cm, pounds or kg) to another unit.\n#' \n#' @param value The value to be converted.\n#' @param from Unit of given value.\n#' @param to Unit in which value will be converted.\n#' @param r Number of decimals\n#' @author Kafi\n#' @export \n\n\nUnitConv <- function(value, from = c(\"inch\", \"cm\", \"pounds\", \"kg\"), to = c(\"inch\", \"pounds\", \"cm\", \"kg\"), r = 2){\n#from and to identical\n  if (from == to){\n    result <- value\n  \n#Height\n  #From Inch to...\n  } else if (from == \"inch\"){\n    \n    #to cm\n    if (to == \"cm\"){\n      result <- round(value*2.54, r)\n    }\n  \n  #From Cm to... \n  } else if (from == \"cm\") {\n    \n    #to inch\n    if (to == \"inch\"){\n      result <- round(value/2.54, r)\n    }\n    \n#Weight\n  #From pounds to...\n  } else if (from == \"pounds\"){\n    \n    #to kg\n    if (to == \"kg\"){\n      result <- round(value*.453592, r)\n    }\n    \n  #From kg to...\n  } else if (from == \"kg\"){\n    \n    #to pounds\n    if (to == \"pounds\"){\n      result <- round(value/.453592, r)\n    }\n  }\n  \n  return(result)\n}\n",
+    "created" : 1494682315319.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "12|113|53|0|\n",
+    "hash" : "1379181152",
+    "id" : "C7CC1A90",
+    "lastKnownWriteTime" : 1494683059,
+    "last_content_update" : 1494683137818,
+    "path" : "C:/Users/Flösch/Repositories/bacon_practise/inst/UnitConv.R",
+    "project_path" : "inst/UnitConv.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
